@@ -1,0 +1,263 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  height: 101%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+/* devices with < 450 px (phone vertical etc.) [test with chrome viewport plugin] */
+@media (max-width: 449px) {
+  body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; /*Helvetica, Arial, sans-serif;*/
+    font-size: 14px;
+    background: #fff;
+    color: #222; 
+    width: 100%;
+    margin: 50px auto;
+  }
+}
+/* devices with at least 450 px (desktop, phone horizontal etc.) [test with chrome viewport plugin] */
+@media (min-width: 450px) {
+  body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; /*Helvetica, Arial, sans-serif;*/
+    font-size: 14px;
+    background: #fff;
+    color: #222; 
+    width: 450px;
+    margin: 50px auto;
+  }
+}
+a {
+  color: #1141E1;
+  text-decoration: none;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  outline: 0px;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  outline: 0;
+  border: 0;
+  /* avoid too wide images on phones
+    - works fine with chrome viewport plugin on all resolutions+rotations
+    - doesnt work on galaxy s plus portrait for some reason   
+  */
+  max-width: 100%;
+}
+h1 {
+  font-size: 22px;
+  color: #222;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+h2 {
+  font-size: 17px;
+  font-weight: normal;
+  color: #1141E1;
+  margin-bottom: 12px;
+}
+h3 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 5px;
+}
+h4 {
+  color: #069cff;
+  font-weight: normal;
+}
+p {
+  margin-bottom: 20px;
+}
+
+/* vis2k: nav replacements */
+#menu {
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+#menu li {
+  list-style: none;
+  margin-right: 20px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: left;
+}
+#menu li a {
+  color: #666;
+}
+#menu li a.active {
+  color: #EE1729;
+}
+
+#submenu {
+  overflow: hidden;
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+#submenu li {
+  list-style: none;
+  margin-right: 20px;
+  margin-left: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  float: left;
+}
+#submenu li a.active {
+  color: #EE1729;
+}
+#submenu a {
+  font-size: 13px;
+  font-weight: normal;
+  color: #666;
+}
+
+/* vis2k: nav doesnt work in older IE versions, hence replaced with div
+nav {
+  overflow: hidden;
+  border-top: 1px solid #069cff;
+  border-bottom: 1px solid #069cff;
+  padding: 10px 0;
+}
+nav li {
+  list-style: none;
+  margin-right: 20px;
+  margin-left: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  float: left;
+}
+nav li a.active {
+  color: #069cff;
+}
+nav.submenu {
+  border-top: none;
+  margin-bottom: 20px;
+}
+nav.submenu a {
+  font-weight: normal;
+}
+*/
+
+section.content {
+  margin-top: 40px;
+}
+footer {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 13px;
+  color: #666;
+}
+footer a {
+  color: #666;
+}
+footer a:hover {
+  color: #666;
+}
+
+/* vis2k: fix list margins 
+ul {
+    margin-top: -20px;
+    margin-bottom: 22px;
+}
+ol {
+    margin-top: -20px;
+    margin-bottom: 22px;
+}*/
+li {
+    margin-left: 26px;
+}
+
+/* vis2k: 
+ code highlighting 
+ note: to customize each code line itself, modify the 'code' tag
+*/
+pre.highlight {
+    /* enable horizontal scrolling if code is too wide */
+    overflow-x: auto;
+
+    /* font size */
+    font-size: 12px;
+    line-height: 15px;
+
+    /* give the code blocks some background*/
+    background-color: #f8f8f8;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+
+    /* decrease space between text and code */
+    margin-top: -15px;
+    margin-bottom: 0px;
+}
+
+/* gray box for premium hint below tutorials */
+#box
+{
+    /*background-image: url(../images/premium_background.jpg);*/
+    background-color: #f8f8f8;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 22px;
+}
+
+/* button */
+.myButton {
+    -moz-box-shadow: 0px 1px 0px 0px #fff6af;
+    -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+    background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+    background-color:#ffec64;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #ffaa22;
+    display:inline-block;
+    cursor:pointer;
+    color:#333333;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+}
+.myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+    background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+    background-color:#ffab23;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
