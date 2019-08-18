@@ -3,11 +3,11 @@
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public float distance = -17.0f;
-    public float cameraY = 12.0f;
+    public float distance = -35.0f;
+    public float cameraY = -5.0f;
 
     private float targetX;
-    public float xOffset = 0.0f;
+    public float xOffset = 10.0f;
 
     private Vector3 follow;
 
