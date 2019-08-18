@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class controls : MonoBehaviour
+public class Controls : MonoBehaviour
 {
     public float speed = 8.0f;
     public float jumpspeed = 20.5f;
@@ -15,7 +15,7 @@ public class controls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
