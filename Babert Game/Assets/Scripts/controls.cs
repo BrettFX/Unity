@@ -1,8 +1,6 @@
 ﻿// Jimmy Vegas Unity Tutorial
 // This Script will allow you to control the rocket
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Controls : MonoBehaviour
@@ -11,12 +9,6 @@ public class Controls : MonoBehaviour
     public float jumpspeed = 20.5f;
     public float gravity = 20.0f;
     public Vector3 moveDirection = Vector3.zero;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
