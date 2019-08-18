@@ -5,11 +5,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public float distance = 14.0f;
+    public float distance = -17.0f;
     public float cameraY = 12.0f;
 
     private float targetX;
-    public float cameraPosition = 17.0f;
+    public float xOffset = 0.0f;
 
     private Vector3 follow;
 
@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         targetX = target.position.x - 2;
-        follow = new Vector3(targetX + cameraPosition, 20f, 0f);
+        follow = new Vector3(targetX + xOffset, cameraY, distance);
         transform.position = follow;
     }
 }
