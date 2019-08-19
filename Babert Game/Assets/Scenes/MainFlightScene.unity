@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1619366165}
-  distance: -50
+  distance: -35
   cameraY: -5
   xOffset: 10
 --- !u!1 &1172356642
