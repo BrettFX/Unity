@@ -5195,7 +5195,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c0ed663bd50d78345a1cd504a9c07e1a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5767,6 +5767,7 @@ GameObject:
   - component: {fileID: 1339858683}
   - component: {fileID: 1339858682}
   - component: {fileID: 1339858686}
+  - component: {fileID: 1339858687}
   m_Layer: 0
   m_Name: Star001
   m_TagString: Stars
@@ -5840,7 +5841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339858681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42, y: -2.3, z: -4}
+  m_LocalPosition: {x: 17.24, y: -2.3, z: -4}
   m_LocalScale: {x: 2, y: 2, z: 0.1}
   m_Children:
   - {fileID: 2073319436}
@@ -5860,6 +5861,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8e06c1a468eba4493a8afbff3d6188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1339858687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339858681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb5c89bfa2d879418a582a5ae4c93af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starScore: 500
+  starSound: {fileID: 480606778}
 --- !u!1 &1592908941
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,7 +5961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592908941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -2.3, z: -4}
+  m_LocalPosition: {x: 31.64, y: -2.3, z: -4}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
