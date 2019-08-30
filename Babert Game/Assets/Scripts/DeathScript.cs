@@ -9,8 +9,17 @@ public class DeathScript : MonoBehaviour
     public GameObject gameOverText;
     public GameObject rocket;
 
+    public AudioSource crash;
+    public GameObject mainAudio;
+
     void OnTriggerEnter(Collider col)
     {
+        ScoringSystem.SaveScore();
+
+        // Play crash sound and stop main audio
+        crash.Play();
+        mainAudio.SetActive(false);
+
         gameOverScreen.SetActive(true);
         gameOverText.SetActive(true);
         rocket.SetActive(false);

@@ -8,7 +8,7 @@ public class FlyOrQuit : MonoBehaviour
     {
         // Load recycler scene to start over
         if (GUI.Button(new Rect(Screen.width / 2 - 120, Screen.height / 2 - 50, 100, 30), "Fly Again"))
-        {
+        {            
             SceneManager.LoadScene(2);
         }
 
