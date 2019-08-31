@@ -12,9 +12,13 @@ public class ScoringSystem : MonoBehaviour
 
     public static int score;
     public GameObject scoreDisplay;
+    public GameObject highScoreDisplay;
 
     void Start()
     {
+        // Load high score
+        LoadScore();
+        
         // Reset score
         ScoringSystem.score = 0;
         InvokeRepeating("AddScore", START_DELAY, INCREASE_RATE);
@@ -31,5 +35,24 @@ public class ScoringSystem : MonoBehaviour
         StreamWriter scoreFile = File.CreateText(SAVE_FILE);
         scoreFile.WriteLine(score);
         scoreFile.Close();
+    }
+
+    public void LoadScore()
+    {
+        string scoreLoad = "0";
+        string line;
+
+        StreamReader sr = new StreamReader(SAVE_FILE);
+
+        line = sr.ReadLine();
+        while (line != null)
+        {
+            scoreLoad = line;
+            line = sr.ReadLine();
+        }
+
+        sr.Close();
+
+        highScoreDisplay.GetComponent<Text>().text = "High Score: " + scoreLoad;
     }
 }
