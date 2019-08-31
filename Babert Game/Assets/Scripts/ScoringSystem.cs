@@ -11,6 +11,7 @@ public class ScoringSystem : MonoBehaviour
     private const int SCORE_DELTA = 5; // Set to zero if only collectables should increase score
 
     public static int score;
+    public static int highScore = 0;
     public GameObject scoreDisplay;
     public GameObject highScoreDisplay;
 
@@ -27,19 +28,31 @@ public class ScoringSystem : MonoBehaviour
     void AddScore()
     {
         score += SCORE_DELTA;
+
+        // Update highscore when the current score exceeds the highscore
+        if (score >= highScore)
+        {
+            highScore = score;
+        }
+
         scoreDisplay.GetComponent<Text>().text = "Score: " + score;
+        highScoreDisplay.GetComponent<Text>().text = "High Score: " + highScore;
     }
 
+    // Save score only if a new highscore was met
     public static void SaveScore()
-    {   
-        StreamWriter scoreFile = File.CreateText(SAVE_FILE);
-        scoreFile.WriteLine(score);
-        scoreFile.Close();
+    {
+        if (highScore == score)
+        {
+            StreamWriter scoreFile = File.CreateText(SAVE_FILE);
+            scoreFile.WriteLine(score);
+            scoreFile.Close();
+        }
     }
 
     public void LoadScore()
     {
-        string scoreLoad = "0";
+        string scoreLoad = "0"; 
         string line;
 
         StreamReader sr = new StreamReader(SAVE_FILE);
@@ -54,5 +67,6 @@ public class ScoringSystem : MonoBehaviour
         sr.Close();
 
         highScoreDisplay.GetComponent<Text>().text = "High Score: " + scoreLoad;
+        highScore = int.Parse(scoreLoad);
     }
 }
