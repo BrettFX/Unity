@@ -15,6 +15,8 @@ public class ScoringSystem : MonoBehaviour
     public GameObject scoreDisplay;
     public GameObject highScoreDisplay;
 
+    private static bool saved = false;
+
     void Start()
     {
         // Load high score
@@ -27,16 +29,20 @@ public class ScoringSystem : MonoBehaviour
 
     void AddScore()
     {
-        score += SCORE_DELTA;
-
-        // Update highscore when the current score exceeds the highscore
-        if (score >= highScore)
+        // Only add score if the score has not already been saved (indicating gameover)
+        if (!saved)
         {
-            highScore = score;
-        }
+            scoreDisplay.GetComponent<Text>().text = "Score: " + score;
+            highScoreDisplay.GetComponent<Text>().text = "High Score: " + highScore;
 
-        scoreDisplay.GetComponent<Text>().text = "Score: " + score;
-        highScoreDisplay.GetComponent<Text>().text = "High Score: " + highScore;
+            score += SCORE_DELTA;
+
+            // Update highscore when the current score exceeds the highscore
+            if (score >= highScore)
+            {
+                highScore = score;
+            }
+        }
     }
 
     // Save score only if a new highscore was met
@@ -46,8 +52,10 @@ public class ScoringSystem : MonoBehaviour
         {
             StreamWriter scoreFile = File.CreateText(SAVE_FILE);
             scoreFile.WriteLine(score);
-            scoreFile.Close();
+            scoreFile.Close();           
         }
+
+        saved = true;
     }
 
     public void LoadScore()
