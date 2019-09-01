@@ -15,7 +15,6 @@ public class DeathScript : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         NextAxis.xAxis = NextAxis.START_X;
-
         ScoringSystem.SaveScore();
 
         // Play crash sound and stop main audio

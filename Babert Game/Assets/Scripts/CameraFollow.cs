@@ -3,8 +3,8 @@
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public float distance = -35.0f;
-    public float cameraY = -5.0f;
+    public float distance = -27.5f;
+    public float cameraY = 0.0f;
 
     private float targetX;
     public float xOffset = 10.0f;
@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetX = target.position.x - 2;
+        targetX = target.position.x;
         follow = new Vector3(targetX + xOffset, cameraY, distance);
         transform.position = follow;
     }
