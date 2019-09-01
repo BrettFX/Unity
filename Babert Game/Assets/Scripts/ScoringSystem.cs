@@ -21,6 +21,7 @@ public class ScoringSystem : MonoBehaviour
     {
         // Load high score
         LoadScore();
+        saved = false;
         
         // Reset score
         ScoringSystem.score = 0;

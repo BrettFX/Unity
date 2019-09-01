@@ -10,28 +10,20 @@ public class Controls : MonoBehaviour
     public float gravity = 20.0f;
     public Vector3 moveDirection = Vector3.zero;
 
+    void Start()
+    {
+        moveDirection = new Vector3(0, 0, Input.GetAxis("Horizontal") + 3);
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= speed;
+    }
+
     // Update is called once per frame
     void Update()
     {
         CharacterController controller = GetComponent<CharacterController>();
-        if (controller.isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            moveDirection = new Vector3(0, 0, Input.GetAxis("Horizontal") + 3);
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                moveDirection.y += jumpspeed;
-            }
-
-        }
-        else
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                moveDirection.y += jumpspeed;
-            }
+            moveDirection.y += jumpspeed;
         }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
