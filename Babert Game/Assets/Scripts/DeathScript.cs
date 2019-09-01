@@ -22,8 +22,8 @@ public class DeathScript : MonoBehaviour
         crash.Play();
         mainAudio.SetActive(false);
 
+        // Display death screen and give the user the option to restart or go back to main menu
         gameOverScreen.SetActive(true);
-        gameOverText.SetActive(true);
         rocket.SetActive(false);
     }
 }
