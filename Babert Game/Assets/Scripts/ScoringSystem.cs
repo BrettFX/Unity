@@ -4,7 +4,17 @@ using System.IO;
 
 public class ScoringSystem : MonoBehaviour
 {
-    public static string SAVE_FILE = "highscore.data";
+    public enum Platform
+    {
+        DESKTOP,
+        ANDROID,
+        IOS
+    };
+
+    public static Platform TARGET_PLATFORM = Platform.ANDROID;
+
+    public const string SAVE_FILE = "highscore.data";
+    public const string PREFS_KEY = "HighScore";
 
     private const float INCREASE_RATE = 0.1f; 
     private const int START_DELAY = 0; // In seconds
@@ -51,9 +61,19 @@ public class ScoringSystem : MonoBehaviour
     {
         if (highScore == score)
         {
-            StreamWriter scoreFile = File.CreateText(SAVE_FILE);
-            scoreFile.WriteLine(score);
-            scoreFile.Close();           
+            switch (TARGET_PLATFORM)
+            {
+                case Platform.DESKTOP:
+                    StreamWriter scoreFile = File.CreateText(SAVE_FILE);
+                    scoreFile.WriteLine(score);
+                    scoreFile.Close();
+                    break;
+                case Platform.ANDROID:
+                    PlayerPrefs.SetInt(PREFS_KEY, score);
+                    break;
+                case Platform.IOS:
+                    break;
+            }
         }
 
         saved = true;
@@ -61,21 +81,34 @@ public class ScoringSystem : MonoBehaviour
 
     public void LoadScore()
     {
-        string scoreLoad = "0"; 
-        string line;
-
-        StreamReader sr = new StreamReader(SAVE_FILE);
-
-        line = sr.ReadLine();
-        while (line != null)
+        switch (TARGET_PLATFORM)
         {
-            scoreLoad = line;
-            line = sr.ReadLine();
+            case Platform.DESKTOP:
+                string scoreLoad = "0";
+                string line;
+
+                StreamReader sr = new StreamReader(SAVE_FILE);
+
+                line = sr.ReadLine();
+                while (line != null)
+                {
+                    scoreLoad = line;
+                    line = sr.ReadLine();
+                }
+
+                sr.Close();
+                highScore = int.Parse(scoreLoad);
+                break;
+
+            case Platform.ANDROID:
+                highScore = PlayerPrefs.GetInt(PREFS_KEY, 0);
+                break;
+
+            case Platform.IOS:
+                break;
         }
 
-        sr.Close();
-
-        highScoreDisplay.GetComponent<Text>().text = "High Score: " + scoreLoad;
-        highScore = int.Parse(scoreLoad);
+        highScoreDisplay.GetComponent<Text>().text = "High Score: " + highScore;
+        
     }
 }
