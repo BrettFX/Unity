@@ -7,11 +7,10 @@ public class ScoringSystem : MonoBehaviour
     public enum Platform
     {
         DESKTOP,
-        ANDROID,
-        IOS
+        MOBILE
     };
 
-    public static Platform TARGET_PLATFORM = Platform.DESKTOP;
+    public static Platform TARGET_PLATFORM = Platform.MOBILE;
 
     public const string SAVE_FILE = "highscore.data";
     public const string PREFS_KEY = "HighScore";
@@ -68,10 +67,8 @@ public class ScoringSystem : MonoBehaviour
                     scoreFile.WriteLine(score);
                     scoreFile.Close();
                     break;
-                case Platform.ANDROID:
+                case Platform.MOBILE:
                     PlayerPrefs.SetInt(PREFS_KEY, score);
-                    break;
-                case Platform.IOS:
                     break;
             }
         }
@@ -118,11 +115,8 @@ public class ScoringSystem : MonoBehaviour
                 highScore = int.Parse(scoreLoad);
                 break;
 
-            case Platform.ANDROID:
+            case Platform.MOBILE:
                 highScore = PlayerPrefs.GetInt(PREFS_KEY, 0);
-                break;
-
-            case Platform.IOS:
                 break;
         }
 
