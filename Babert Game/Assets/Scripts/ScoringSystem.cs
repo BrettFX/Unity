@@ -11,7 +11,7 @@ public class ScoringSystem : MonoBehaviour
         IOS
     };
 
-    public static Platform TARGET_PLATFORM = Platform.ANDROID;
+    public static Platform TARGET_PLATFORM = Platform.DESKTOP;
 
     public const string SAVE_FILE = "highscore.data";
     public const string PREFS_KEY = "HighScore";
@@ -79,6 +79,14 @@ public class ScoringSystem : MonoBehaviour
         saved = true;
     }
 
+    // Create the score file if it does not exist
+    public static void CreateScoreFile()
+    {
+        StreamWriter scoreFile = File.CreateText(SAVE_FILE);
+        scoreFile.WriteLine("0");
+        scoreFile.Close();
+    }
+
     public void LoadScore()
     {
         switch (TARGET_PLATFORM)
@@ -87,16 +95,26 @@ public class ScoringSystem : MonoBehaviour
                 string scoreLoad = "0";
                 string line;
 
-                StreamReader sr = new StreamReader(SAVE_FILE);
-
-                line = sr.ReadLine();
-                while (line != null)
+                // Try to read highscore and create the score file if it does not exist
+                try
                 {
-                    scoreLoad = line;
+                    StreamReader sr = new StreamReader(SAVE_FILE);
+
                     line = sr.ReadLine();
+                    while (line != null)
+                    {
+                        scoreLoad = line;
+                        line = sr.ReadLine();
+                    }
+
+                    sr.Close();
+                } 
+                catch (FileNotFoundException)
+                {
+                    CreateScoreFile();
                 }
 
-                sr.Close();
+
                 highScore = int.Parse(scoreLoad);
                 break;
 
