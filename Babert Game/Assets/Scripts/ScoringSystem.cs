@@ -10,7 +10,7 @@ public class ScoringSystem : MonoBehaviour
         MOBILE
     };
 
-    public static Platform TARGET_PLATFORM = Platform.MOBILE;
+    public static Platform TARGET_PLATFORM = Platform.DESKTOP;
 
     public const string SAVE_FILE = "highscore.data";
     public const string PREFS_KEY = "HighScore";
