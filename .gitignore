@@ -39,8 +39,6 @@ sysinfo.txt
 .DS_Store
 
 # iOS
-*libil2cpp.a
-*libiPhone-lib.a
-./Tetris/iOS/Tetris/Libraries/libiPhone-lib.a
-./Tetris/iOS/Tetris/Libraries/libil2cpp.a
+**/libil2cpp.a
+**/libiPhone-lib.a
 
