@@ -1,46 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlanetTranslation : MonoBehaviour
 {
-    public const float SPEED = 0.1f;
+    public const float SPEED = 0.5f;
     private int direction = 1;
 
     //Make sure to assign this in the Inspector window
-    public Transform m_NewTransform;
+    public Transform m_upperBounds;
+    public Transform m_lowerBounds;
     Collider m_Collider;
-    Vector3 m_Point;
+    Vector3 m_upperVect3;
+    Vector3 m_lowerVect3;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("This shit is working...");
-        //Fetch the Collider from the GameObject this script is attached to
+        // Fetch the Collider from the GameObject this script is attached to
         m_Collider = GetComponent<Collider>();
-        //Assign the point to be that of the Transform you assign in the Inspector window
-        m_Point = m_NewTransform.position;
+
+        // Get position of reference upper and lower bounds to for translation range
+        m_upperVect3 = m_upperBounds.position;
+        m_lowerVect3 = m_lowerBounds.position;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //Vector3 targetTransform = transform.GetComponent<Vector3>();
-        //Texture3D bounds = relativeTo.GetComponent<Texture3D>();
-
-        //if (targetTransform.y >= bounds.height)
-        //{
-        //    direction = -1;
-        //}
-        //else if (targetTransform.y == 0)
-        //{
-        //    direction = 1;
-        //}
-
-        //If the first GameObject's Bounds contains the Transform's position, output a message in the console
-        if (m_Collider.bounds.Contains(m_Point))
+    {  
+        // If the first GameObject's Bounds contains the Transform's position, bounce the object back
+        if (this.transform.position.y >= m_upperVect3.y || this.transform.position.y <= m_lowerVect3.y)
         {
-            Debug.Log("Bounds contain the point : " + m_Point);
+            direction *= -1;
         }
 
         float delta = SPEED * direction;
