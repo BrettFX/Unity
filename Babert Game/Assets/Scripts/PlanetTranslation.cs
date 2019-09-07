@@ -2,7 +2,7 @@
 
 public class PlanetTranslation : MonoBehaviour
 {
-    public const float SPEED = 0.5f;
+    public float speed = 0.5f;
     private int direction = 1;
 
     //Make sure to assign this in the Inspector window
@@ -32,7 +32,7 @@ public class PlanetTranslation : MonoBehaviour
             direction *= -1;
         }
 
-        float delta = SPEED * direction;
+        float delta = speed * direction;
         transform.Translate(0, delta, 0, Space.World);
     }
 }
