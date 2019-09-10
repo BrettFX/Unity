@@ -46,8 +46,16 @@ public class PlanetTranslation : MonoBehaviour
         }
 
         // If desired, set the y position of the planet to be anchored to
-        // the center of upper and lower bounds
+        // the center of upper and lower bounds (synchonizes side-by-side planet translation)
+        if (m_anchorCenter)
+        {
+            Vector3 prevPos = this.transform.position;
+            float normalizedY = (m_upperVect3.y + m_lowerVect3.y) / 2;
 
+            // Instantiate the new position and anchor the y axis to the center for the transform
+            Vector3 newPos = new Vector3(prevPos.x, normalizedY, prevPos.z);
+            this.transform.position = newPos;
+        }
     }
 
     // Update is called once per frame
