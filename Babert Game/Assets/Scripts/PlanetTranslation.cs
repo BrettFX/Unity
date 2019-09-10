@@ -2,13 +2,19 @@
 
 public class PlanetTranslation : MonoBehaviour
 {
-    private const int UP = 1;
-    private const int DOWN = -1;
+    public enum Direction
+    {
+        UP,
+        DOWN
+    }
 
-    public int m_directionStart = UP;
+    public Direction m_directionStart = Direction.UP;
 
     public float speed = 0.5f;
     private int direction;
+
+    // Flag to determine if the planet should render in the center between the upper and lower bounds
+    public bool m_anchorCenter = false;
 
     //Make sure to assign this in the Inspector window
     public Transform m_upperBounds;
@@ -24,7 +30,24 @@ public class PlanetTranslation : MonoBehaviour
         m_lowerVect3 = m_lowerBounds.position;
 
         // Set the starting direction
-        direction = m_directionStart;
+        switch (m_directionStart)
+        {
+            case Direction.UP:
+                direction = 1;
+                break;
+
+            case Direction.DOWN:
+                direction = -1;
+                break;
+
+            default:
+                direction = 1;
+                break;
+        }
+
+        // If desired, set the y position of the planet to be anchored to
+        // the center of upper and lower bounds
+
     }
 
     // Update is called once per frame
