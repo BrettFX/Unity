@@ -4717,6 +4717,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4822,6 +4823,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4888,5 +4890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd449bd85a0ec0343a842f6be2e45efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_directionStart: 0
+  speed: 0.25
+  m_anchorCenter: 0
   m_upperBounds: {fileID: 0}
   m_lowerBounds: {fileID: 0}
