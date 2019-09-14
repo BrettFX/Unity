@@ -22,6 +22,8 @@ public class PlanetTranslation : MonoBehaviour
     Vector3 m_upperVect3;
     Vector3 m_lowerVect3;
 
+    public ParticleSystem particleSystem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +73,10 @@ public class PlanetTranslation : MonoBehaviour
 
             float delta = speed * direction;
             transform.Translate(0, delta, 0, Space.World);
+        }
+        else
+        {
+            particleSystem.Pause(true);
         }
     }
 }
