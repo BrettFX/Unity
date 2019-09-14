@@ -22,7 +22,7 @@ public class PlanetTranslation : MonoBehaviour
     Vector3 m_upperVect3;
     Vector3 m_lowerVect3;
 
-    public ParticleSystem particleSystem;
+    public ParticleSystem planetParticleSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +65,11 @@ public class PlanetTranslation : MonoBehaviour
     {  
         if (!PauseMenu.paused)
         {
+            if (!planetParticleSystem.isPlaying)
+            {
+                planetParticleSystem.Play(true);
+            }
+
             // If the first GameObject's Bounds contains the Transform's position, bounce the object back
             if (this.transform.position.y >= m_upperVect3.y || this.transform.position.y <= m_lowerVect3.y)
             {
@@ -76,7 +81,10 @@ public class PlanetTranslation : MonoBehaviour
         }
         else
         {
-            particleSystem.Pause(true);
+            if (!planetParticleSystem.isPaused)
+            {
+                planetParticleSystem.Pause(true);
+            }
         }
     }
 }

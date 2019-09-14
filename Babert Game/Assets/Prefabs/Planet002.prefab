@@ -4895,4 +4895,4 @@ MonoBehaviour:
   m_anchorCenter: 0
   m_upperBounds: {fileID: 0}
   m_lowerBounds: {fileID: 0}
-  particleSystem: {fileID: 5045520246487727308}
+  planetParticleSystem: {fileID: 5045520246487727308}
