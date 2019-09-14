@@ -61,13 +61,16 @@ public class PlanetTranslation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        // If the first GameObject's Bounds contains the Transform's position, bounce the object back
-        if (this.transform.position.y >= m_upperVect3.y || this.transform.position.y <= m_lowerVect3.y)
+        if (!PauseMenu.paused)
         {
-            direction *= -1;
-        }
+            // If the first GameObject's Bounds contains the Transform's position, bounce the object back
+            if (this.transform.position.y >= m_upperVect3.y || this.transform.position.y <= m_lowerVect3.y)
+            {
+                direction *= -1;
+            }
 
-        float delta = speed * direction;
-        transform.Translate(0, delta, 0, Space.World);
+            float delta = speed * direction;
+            transform.Translate(0, delta, 0, Space.World);
+        }
     }
 }

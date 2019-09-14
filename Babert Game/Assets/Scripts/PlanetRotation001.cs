@@ -9,6 +9,9 @@ public class PlanetRotation001 : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, SPEED, 0, Space.World);
+        if (!PauseMenu.paused)
+        {
+            transform.Rotate(0, SPEED, 0, Space.World); 
+        }
     }
 }

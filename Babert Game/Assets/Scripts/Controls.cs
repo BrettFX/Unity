@@ -20,18 +20,22 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CharacterController controller = GetComponent<CharacterController>();
-        if (Input.GetButtonDown("Jump"))
+        // Only move if not paused
+        if (!PauseMenu.paused)
         {
-            moveDirection.y += jumpspeed;
+            CharacterController controller = GetComponent<CharacterController>();
+            if (Input.GetButtonDown("Jump"))
+            {
+                moveDirection.y += jumpspeed;
+            }
+
+            // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
+            // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
+            // as an acceleration (ms^-2)
+            moveDirection.y -= gravity * Time.deltaTime;
+
+            // Move the controller
+            controller.Move(moveDirection * Time.deltaTime);
         }
-
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        moveDirection.y -= gravity * Time.deltaTime;
-
-        // Move the controller
-        controller.Move(moveDirection * Time.deltaTime);
     }
 }

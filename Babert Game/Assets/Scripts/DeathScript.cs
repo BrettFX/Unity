@@ -14,6 +14,7 @@ public class DeathScript : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        // Set the next axis to the start x so that the initially spawned axis isn't off screen
         NextAxis.xAxis = NextAxis.START_X;
         ScoringSystem.SaveScore();
 
