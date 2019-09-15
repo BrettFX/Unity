@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
+    private const string AUDIO_MUTED_KEY = "AudioMuteState";
+
     private bool m_volumeToggle = true;
 
     public Button btnVolume;
@@ -16,14 +18,23 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // TODO get from player prefs
-        m_volumeToggle = true;
+        // Get boolean state of audio muting flag (logically convert int to bool)
+        m_volumeToggle = (PlayerPrefs.GetInt(AUDIO_MUTED_KEY, 1) != 0);
+        SetVolumeState();
     }
 
     // Toggle the volume state
     public void ToggleVolumeState()
     {
         m_volumeToggle = !m_volumeToggle;
+        SetVolumeState();
+
+        // Save the mute state in player prefs so it can be re-loaded at the beginning of another game
+        PlayerPrefs.SetInt(AUDIO_MUTED_KEY, m_volumeToggle ? 1 : 0);
+    }
+
+    private void SetVolumeState()
+    {
         Sprite targetSprite = m_volumeToggle ? spriteVolOn : spriteVolOff;
         btnVolume.GetComponent<Image>().sprite = targetSprite;
 
