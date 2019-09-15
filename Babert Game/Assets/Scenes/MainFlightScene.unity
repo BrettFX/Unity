@@ -12923,6 +12923,9 @@ MonoBehaviour:
   btnVolume: {fileID: 284944982}
   spriteVolOn: {fileID: 21300000, guid: 3020468cde88b0e4aac991eebf67fb36, type: 3}
   spriteVolOff: {fileID: 21300000, guid: a9f5cef1cd6e23e42ad1046a56dcd6de, type: 3}
+  mainAudio: {fileID: 1622754323}
+  crash: {fileID: 1824382903}
+  starSound: {fileID: 480606778}
 --- !u!4 &1649800088
 Transform:
   m_ObjectHideFlags: 0

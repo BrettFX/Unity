@@ -9,6 +9,10 @@ public class SoundManager : MonoBehaviour
     public Sprite spriteVolOn;
     public Sprite spriteVolOff;
 
+    public AudioSource mainAudio;
+    public AudioSource crash;
+    public AudioSource starSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +26,10 @@ public class SoundManager : MonoBehaviour
         m_volumeToggle = !m_volumeToggle;
         Sprite targetSprite = m_volumeToggle ? spriteVolOn : spriteVolOff;
         btnVolume.GetComponent<Image>().sprite = targetSprite;
+
+        // Toggle audio assets mute/unmute (needs to be inverse of volume toggle state)
+        mainAudio.mute = !m_volumeToggle;
+        crash.mute = !m_volumeToggle;
+        starSound.mute = !m_volumeToggle;
     }
 }
