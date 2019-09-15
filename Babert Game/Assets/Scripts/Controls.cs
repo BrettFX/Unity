@@ -10,6 +10,8 @@ public class Controls : MonoBehaviour
     public float gravity = 20.0f;
     public Vector3 moveDirection = Vector3.zero;
 
+    public ParticleSystem rocketParticleSystem;
+
     void Start()
     {
         moveDirection = new Vector3(0, 0, Input.GetAxis("Horizontal") + 3);
@@ -23,6 +25,11 @@ public class Controls : MonoBehaviour
         // Only move if not paused
         if (!PauseMenu.paused)
         {
+            if (!rocketParticleSystem.isPlaying)
+            {
+                rocketParticleSystem.Play(true);
+            }
+
             CharacterController controller = GetComponent<CharacterController>();
             if (Input.GetButtonDown("Jump"))
             {
@@ -36,6 +43,13 @@ public class Controls : MonoBehaviour
 
             // Move the controller
             controller.Move(moveDirection * Time.deltaTime);
+        }
+        else
+        {
+            if (!rocketParticleSystem.isPaused)
+            {
+                rocketParticleSystem.Pause(true);
+            }
         }
     }
 }
