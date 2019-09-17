@@ -11,11 +11,6 @@ public class SettingsManager : MonoBehaviour
         SFX
     }
 
-    // Private player prefs keys
-    private const string MASTER_VOLUME_KEY = "MasterVolume";
-    private const string MUSIC_KEY = "Music";
-    private const string SFX_KEY = "SFX";
-
     [Serializable]
     public struct Settings
     {
@@ -27,7 +22,11 @@ public class SettingsManager : MonoBehaviour
     private void Start()
     {
         // Initialize settings states; attempt to load from player prefs
-
+        foreach (Settings s in settings)
+        {
+            s.slider.value = PlayerPrefs.GetFloat(s.setting.ToString(), 1.0f);
+            Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
+        }
     }
 
     // Save all settings based on settings dictionary to the respective play prefs entry
