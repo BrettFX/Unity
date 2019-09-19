@@ -8,7 +8,9 @@ public class SettingsManager : MonoBehaviour
     {
         MASTER_VOLUME,
         MUSIC,
-        SFX
+        SFX,
+        DIFFICULTY,
+        MOVEMENT
     }
 
     [Serializable]
@@ -34,8 +36,10 @@ public class SettingsManager : MonoBehaviour
     {
         foreach (Settings s in settings)
         {
-            Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
+            //Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
             PlayerPrefs.SetFloat(s.setting.ToString(), s.slider.value);
         }
+
+        Debug.Log("Settings saved.");
     }
 }
