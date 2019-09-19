@@ -18,6 +18,13 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Load settings saved in player prefs
+        string[] settings = System.Enum.GetNames(typeof(SettingsManager.Setting));
+        foreach (string setting in settings)
+        {
+            Debug.Log("Setting: " + setting + ", Value: " + PlayerPrefs.GetFloat(setting, 1.0f));
+        }
+
         // Get boolean state of audio muting flag (logically convert int to bool)
         m_volumeToggle = (PlayerPrefs.GetInt(AUDIO_MUTED_KEY, 1) != 0);
         SetVolumeState();

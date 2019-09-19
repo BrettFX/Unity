@@ -27,8 +27,10 @@ public class SettingsManager : MonoBehaviour
         foreach (Settings s in settings)
         {
             s.slider.value = PlayerPrefs.GetFloat(s.setting.ToString(), 1.0f);
-            Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
+            //Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
         }
+
+        Debug.Log("Settings loaded.");
     }
 
     // Save all settings based on settings dictionary to the respective play prefs entry
