@@ -15,8 +15,7 @@ public class PauseMenu : MonoBehaviour
         paused = true;
         pauseScreen.SetActive(true);
         btnPause.SetActive(false);
-        mainAudio.GetComponent<AudioSource>().volume = 0.25f;
-
+        AudioListener.volume = AudioListener.volume * 0.25f;
     }
 
     public void Restart()
@@ -26,7 +25,7 @@ public class PauseMenu : MonoBehaviour
         NextAxis.xAxis = NextAxis.START_X;
         pauseScreen.SetActive(false);
         btnPause.SetActive(true);
-        mainAudio.GetComponent<AudioSource>().volume = 1.0f;
+        SettingsManager.Apply(); // Set audio components back to default based on saved settings
         SceneManager.LoadScene(2);
     }
 
@@ -35,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         paused = false;
         pauseScreen.SetActive(false);
         btnPause.SetActive(true);
-        mainAudio.GetComponent<AudioSource>().volume = 1.0f;
+        SettingsManager.Apply(); // Set audio components back to default based on saved settings
     }
 
     public void Quit()
@@ -45,7 +44,7 @@ public class PauseMenu : MonoBehaviour
         NextAxis.xAxis = NextAxis.START_X;
         pauseScreen.SetActive(false);
         btnPause.SetActive(true);
-        mainAudio.GetComponent<AudioSource>().volume = 1.0f;
+        SettingsManager.Apply(); // Set audio components back to default based on saved settings
         SceneManager.LoadScene(0);
     }
 }

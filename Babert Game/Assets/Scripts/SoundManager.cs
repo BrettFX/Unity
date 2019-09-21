@@ -19,11 +19,34 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         // Load settings saved in player prefs
-        string[] settings = System.Enum.GetNames(typeof(SettingsManager.Setting));
-        foreach (string setting in settings)
-        {
-            Debug.Log("Setting: " + setting + ", Value: " + PlayerPrefs.GetFloat(setting, 1.0f));
-        }
+        //string[] settings = System.Enum.GetNames(typeof(SettingsManager.Setting));
+        //foreach (string setting in settings)
+        //{
+        //    Debug.Log("Setting: " + setting + ", Value: " + PlayerPrefs.GetFloat(setting, 1.0f));
+        //}
+
+        // Key settings manipulation
+        // MASTER_VOLUME
+        string master_vol_key = System.Enum.GetName(typeof(SettingsManager.Setting), SettingsManager.Setting.MASTER_VOLUME);
+        float master_vol = PlayerPrefs.GetFloat(master_vol_key, 1.0f);
+        AudioListener.volume = master_vol;
+
+        // MUSIC
+        string music_vol_key = System.Enum.GetName(typeof(SettingsManager.Setting), SettingsManager.Setting.MUSIC);
+        float music_vol = PlayerPrefs.GetFloat(music_vol_key, 1.0f);
+        mainAudio.volume = music_vol;
+
+        // SFX
+        string sfx_vol_key = System.Enum.GetName(typeof(SettingsManager.Setting), SettingsManager.Setting.SFX);
+        float sfx_vol = PlayerPrefs.GetFloat(sfx_vol_key, 1.0f);
+        crash.volume = sfx_vol;
+        starSound.volume = sfx_vol;
+
+        Debug.Log("Master volume set to: " + AudioListener.volume);
+        Debug.Log("Music volume set to: " + mainAudio.volume);
+        Debug.Log("SFX volume:");
+        Debug.Log("|- Crash Sound = " + crash.volume);
+        Debug.Log("|- Star Sound = " + starSound.volume);
 
         // Get boolean state of audio muting flag (logically convert int to bool)
         m_volumeToggle = (PlayerPrefs.GetInt(AUDIO_MUTED_KEY, 1) != 0);
