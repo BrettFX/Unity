@@ -5,7 +5,7 @@ public class DeveloperMode : MonoBehaviour
     private const string DEV_MODE_KEY = "DeveloperMode";
     private const int TRIGGER_COUNT = 5;
 
-    private bool m_devModeEnabled = false;
+    private static bool m_devModeEnabled;
 
     private int m_clicks = 0;
     public GameObject developerButton;
@@ -42,5 +42,10 @@ public class DeveloperMode : MonoBehaviour
             // Save state to player prefs
             PlayerPrefs.SetInt(DEV_MODE_KEY, m_devModeEnabled ? 1 : 0);
         }
+    }
+
+    public static bool IsDevMode()
+    {
+        return PlayerPrefs.GetInt(DEV_MODE_KEY, 0) != 0;
     }
 }
