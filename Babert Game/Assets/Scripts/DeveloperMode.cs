@@ -23,7 +23,10 @@ public class DeveloperMode : MonoBehaviour
     {
         m_clicks++;
         Debug.Log("Clicked " + m_clicks + " time(s)!");
-        Debug.Log("Developer mode  " + (!m_devModeEnabled ? "enabled" : "disabled") + " in " + Mathf.Abs(TRIGGER_COUNT - (m_clicks % TRIGGER_COUNT)) + " clicks.");
+        Debug.Log("Developer mode  " + 
+            (!m_devModeEnabled && (m_clicks % TRIGGER_COUNT) != 0 ? "enabled" : "disabled") + " in " +
+            Mathf.Abs(TRIGGER_COUNT - (m_clicks % TRIGGER_COUNT)) +
+            " clicks.");
 
         // Play special sound effect if clicks are half of trigger cound
         // m_clicks >= TRIGGER_COUNT / 2 && m_clicks <= TRIGGER_COUNT
