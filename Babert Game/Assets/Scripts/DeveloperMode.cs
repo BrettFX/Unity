@@ -2,6 +2,7 @@
 
 public class DeveloperMode : MonoBehaviour
 {
+    private const string DEV_MODE_KEY = "DeveloperMode";
     private const int TRIGGER_COUNT = 5;
 
     private bool m_devModeEnabled = false;
@@ -17,7 +18,8 @@ public class DeveloperMode : MonoBehaviour
         m_clicks = 0;
 
         // Get developer mode state from player prefs
-
+        m_devModeEnabled = PlayerPrefs.GetInt(DEV_MODE_KEY, 0) != 0;
+        developerButton.SetActive(m_devModeEnabled);
     }
 
     // Count number of clicks and enable developer mode
@@ -47,6 +49,9 @@ public class DeveloperMode : MonoBehaviour
             {
                 outSFX.Play();
             }
+
+            // Save state to player prefs
+            PlayerPrefs.SetInt(DEV_MODE_KEY, m_devModeEnabled ? 1 : 0);
         }
     }
 }
