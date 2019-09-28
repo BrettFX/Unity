@@ -459,7 +459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   developerButton: {fileID: 1504558961}
-  specialSFX: {fileID: 1963906509}
+  inSFX: {fileID: 1963906510}
+  outSFX: {fileID: 1963906509}
 --- !u!4 &374355004
 Transform:
   m_ObjectHideFlags: 0
@@ -5034,11 +5035,27 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 1e284a64b62b3b048b4acb9566ba9cc5, type: 3}
+    - target: {fileID: 7918731694681806285, guid: 7461a7b0cf97947fd9b9e4502fd2d07b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002450600727777734, guid: 7461a7b0cf97947fd9b9e4502fd2d07b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 3}
 --- !u!82 &1963906509 stripped
 AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1262428468216726738, guid: 7461a7b0cf97947fd9b9e4502fd2d07b,
+  m_CorrespondingSourceObject: {fileID: 9002450600727777734, guid: 7461a7b0cf97947fd9b9e4502fd2d07b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963906508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1963906510 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7918731694681806285, guid: 7461a7b0cf97947fd9b9e4502fd2d07b,
     type: 3}
   m_PrefabInstance: {fileID: 1963906508}
   m_PrefabAsset: {fileID: 0}

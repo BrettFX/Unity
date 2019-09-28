@@ -8,7 +8,9 @@ public class DeveloperMode : MonoBehaviour
 
     private int m_clicks = 0;
     public GameObject developerButton;
-    public AudioSource specialSFX;
+
+    public AudioSource inSFX;
+    public AudioSource outSFX;
 
     public void Start()
     {
@@ -32,11 +34,19 @@ public class DeveloperMode : MonoBehaviour
         // m_clicks >= TRIGGER_COUNT / 2 && m_clicks <= TRIGGER_COUNT
         if (m_clicks % TRIGGER_COUNT == 0)
         {
-            specialSFX.Play();
-
             // Toggle developer button, enabling/disabling developer mode
             m_devModeEnabled = !m_devModeEnabled;
-            developerButton.SetActive(m_devModeEnabled);            
+            developerButton.SetActive(m_devModeEnabled);
+
+            // Play the respective sound effect
+            if (m_devModeEnabled)
+            {
+                inSFX.Play();
+            }
+            else
+            {
+                outSFX.Play();
+            }
         }
     }
 }
