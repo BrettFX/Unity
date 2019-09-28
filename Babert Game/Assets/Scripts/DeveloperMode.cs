@@ -2,7 +2,7 @@
 
 public class DeveloperMode : MonoBehaviour
 {
-    private const int TRIGGER_COUNT = 10;
+    private const int TRIGGER_COUNT = 5;
 
     private bool m_devModeEnabled = false;
 
@@ -10,26 +10,30 @@ public class DeveloperMode : MonoBehaviour
     public GameObject developerButton;
     public AudioSource specialSFX;
 
+    public void Start()
+    {
+        m_clicks = 0;
+
+        // Get developer mode state from player prefs
+
+    }
+
     // Count number of clicks and enable developer mode
     public void OnClick()
     {
         m_clicks++;
         Debug.Log("Clicked " + m_clicks + " time(s)!");
-
-        int threshold = TRIGGER_COUNT / m_clicks;
+        Debug.Log("Developer mode  " + (!m_devModeEnabled ? "enabled" : "disabled") + " in " + Mathf.Abs(TRIGGER_COUNT - (m_clicks % TRIGGER_COUNT)) + " clicks.");
 
         // Play special sound effect if clicks are half of trigger cound
-        if (threshold == 2 && threshold != 0 && !m_devModeEnabled)
+        // m_clicks >= TRIGGER_COUNT / 2 && m_clicks <= TRIGGER_COUNT
+        if (m_clicks % TRIGGER_COUNT == 0)
         {
             specialSFX.Play();
-        }
 
-        // Display developer button, enabling developer mode
-        if (m_clicks == TRIGGER_COUNT)
-        {
-            developerButton.SetActive(true);
-            m_devModeEnabled = true;
-            Debug.Log("Developer mode enabled!");
+            // Toggle developer button, enabling/disabling developer mode
+            m_devModeEnabled = !m_devModeEnabled;
+            developerButton.SetActive(m_devModeEnabled);            
         }
     }
 }
