@@ -26,11 +26,7 @@ public class DeveloperMode : MonoBehaviour
     public void OnClick()
     {
         m_clicks++;
-        Debug.Log("Clicked " + m_clicks + " time(s)!");
-        Debug.Log("Developer mode  " + 
-            (!m_devModeEnabled && (m_clicks % TRIGGER_COUNT) != 0 ? "enabled" : "disabled") + " in " +
-            Mathf.Abs(TRIGGER_COUNT - (m_clicks % TRIGGER_COUNT)) +
-            " clicks.");
+        Debug.Log("Clicked " + (m_clicks % TRIGGER_COUNT) + " time(s) out of " + TRIGGER_COUNT);
 
         // Play special sound effect if clicks are half of trigger cound
         // m_clicks >= TRIGGER_COUNT / 2 && m_clicks <= TRIGGER_COUNT
@@ -41,14 +37,7 @@ public class DeveloperMode : MonoBehaviour
             developerButton.SetActive(m_devModeEnabled);
 
             // Play the respective sound effect
-            if (m_devModeEnabled)
-            {
-                inSFX.Play();
-            }
-            else
-            {
-                outSFX.Play();
-            }
+            if (m_devModeEnabled) inSFX.Play(); else outSFX.Play();
 
             // Save state to player prefs
             PlayerPrefs.SetInt(DEV_MODE_KEY, m_devModeEnabled ? 1 : 0);
