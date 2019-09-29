@@ -5,7 +5,7 @@ public class DeveloperMode : MonoBehaviour
     private const string DEV_MODE_KEY = "DeveloperMode";
     private const int TRIGGER_COUNT = 5;
 
-    private static bool m_devModeEnabled;
+    private bool m_devModeEnabled;
 
     private int m_clicks = 0;
     public GameObject developerButton;

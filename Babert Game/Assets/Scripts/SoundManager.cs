@@ -42,11 +42,11 @@ public class SoundManager : MonoBehaviour
         crash.volume = sfx_vol;
         starSound.volume = sfx_vol;
 
-        Debug.Log("Master volume set to: " + AudioListener.volume);
-        Debug.Log("Music volume set to: " + mainAudio.volume);
-        Debug.Log("SFX volume:");
-        Debug.Log("|- Crash Sound = " + crash.volume);
-        Debug.Log("|- Star Sound = " + starSound.volume);
+        //Debug.Log("Master volume set to: " + AudioListener.volume);
+        //Debug.Log("Music volume set to: " + mainAudio.volume);
+        //Debug.Log("SFX volume:");
+        //Debug.Log("|- Crash Sound = " + crash.volume);
+        //Debug.Log("|- Star Sound = " + starSound.volume);
 
         // Get boolean state of audio muting flag (logically convert int to bool)
         m_volumeToggle = (PlayerPrefs.GetInt(AUDIO_MUTED_KEY, 1) != 0);
