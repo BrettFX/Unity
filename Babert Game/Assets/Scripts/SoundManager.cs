@@ -5,6 +5,10 @@ public class SoundManager : MonoBehaviour
 {
     private const string AUDIO_MUTED_KEY = "AudioMuteState";
 
+    public const float DEFAULT_MASTER_VOL = 1.0f;
+    public const float DEFAULT_MUSIC_VOL = 1.0f;
+    public const float DEFAULT_SFX_VOL = 1.0f;
+
     private bool m_volumeToggle = true;
 
     public Button btnVolume;
@@ -27,18 +31,18 @@ public class SoundManager : MonoBehaviour
 
         // Key settings manipulation
         // MASTER_VOLUME
-        string master_vol_key = System.Enum.GetName(typeof(SettingsManager.Setting), SettingsManager.Setting.MASTER_VOLUME);
-        float master_vol = PlayerPrefs.GetFloat(master_vol_key, 1.0f);
+        string master_vol_key = System.Enum.GetName(typeof(SettingsManager.AudioSetting), SettingsManager.AudioSetting.MASTER_VOLUME);
+        float master_vol = PlayerPrefs.GetFloat(master_vol_key, DEFAULT_MASTER_VOL);
         AudioListener.volume = master_vol;
 
         // MUSIC
-        string music_vol_key = System.Enum.GetName(typeof(SettingsManager.Setting), SettingsManager.Setting.MUSIC);
-        float music_vol = PlayerPrefs.GetFloat(music_vol_key, 1.0f);
+        string music_vol_key = System.Enum.GetName(typeof(SettingsManager.AudioSetting), SettingsManager.AudioSetting.MUSIC);
+        float music_vol = PlayerPrefs.GetFloat(music_vol_key, DEFAULT_MUSIC_VOL);
         mainAudio.volume = music_vol;
 
         // SFX
-        string sfx_vol_key = System.Enum.GetName(typeof(SettingsManager.Setting), SettingsManager.Setting.SFX);
-        float sfx_vol = PlayerPrefs.GetFloat(sfx_vol_key, 1.0f);
+        string sfx_vol_key = System.Enum.GetName(typeof(SettingsManager.AudioSetting), SettingsManager.AudioSetting.SFX);
+        float sfx_vol = PlayerPrefs.GetFloat(sfx_vol_key, DEFAULT_SFX_VOL);
         crash.volume = sfx_vol;
         starSound.volume = sfx_vol;
 
