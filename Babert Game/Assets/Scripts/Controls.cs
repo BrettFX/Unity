@@ -9,6 +9,8 @@ public class Controls : MonoBehaviour
     public const float DEFAULT_JUMP_SPEED = 20.5f;
     public const float DEFAULT_GRAVITY = 20.0f;
 
+    private const float ROTATION_SPEED = 5.0f;
+
     private float speed;
     private float jumpspeed;
     private float gravity;
@@ -35,7 +37,8 @@ public class Controls : MonoBehaviour
         Debug.Log("Jump Speed: " + jumpspeed);
         Debug.Log("Gravity: " + gravity);
 
-        moveDirection = new Vector3(0, 0, Input.GetAxis("Horizontal") + 3);
+        //moveDirection = new Vector3(0, 0, Input.GetAxis("Horizontal") + 3);
+        moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Horizontal") + 3);
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= speed;
     }
@@ -64,6 +67,9 @@ public class Controls : MonoBehaviour
 
             // Move the controller
             controller.Move(moveDirection * Time.deltaTime);
+
+            // Rotate the rocket
+            transform.Rotate(ROTATION_SPEED, 0, 0, Space.World);
         }
         else
         {
