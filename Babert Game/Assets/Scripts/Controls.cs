@@ -65,6 +65,10 @@ public class Controls : MonoBehaviour
             // as an acceleration (ms^-2)
             moveDirection.y -= gravity * Time.deltaTime;
 
+            // Ensure a fixed z position value so that updating direction doesn't change the rocket's z-value
+            // making the rocket fall behind collidable assets
+            moveDirection.z = 0;
+
             // Move the controller
             controller.Move(moveDirection * Time.deltaTime);
 
