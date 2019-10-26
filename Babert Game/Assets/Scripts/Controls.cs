@@ -69,7 +69,7 @@ public class Controls : MonoBehaviour
             controller.Move(moveDirection * Time.deltaTime);
 
             // Rotate the rocket
-            transform.Rotate(ROTATION_SPEED, 0, 0, Space.World);
+            //transform.Rotate(ROTATION_SPEED, 0, 0, Space.World);
         }
         else
         {
