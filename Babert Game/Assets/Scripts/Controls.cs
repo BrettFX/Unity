@@ -9,7 +9,7 @@ public class Controls : MonoBehaviour
     public const float DEFAULT_JUMP_SPEED = 20.5f;
     public const float DEFAULT_GRAVITY = 20.0f;
 
-    private const float ROTATION_SPEED = 5.0f;
+    private const float ROTATION_SPEED = 10.0f;
 
     private float speed;
     private float jumpspeed;
