@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour
 
     private float targetX;
     public float xOffset = 10.0f;
+    public float zOffset = -5.0f;
 
     private Vector3 follow;
 
@@ -28,7 +29,9 @@ public class CameraFollow : MonoBehaviour
         cameraY = (m_upperVect3.y + m_lowerVect3.y) / 2;
 
         // Set Camera Z to be the negative distance between the upper bounds and lower bounds to zoom out
-        cameraZ = -Distance(m_upperVect3, m_lowerVect3);
+        cameraZ = -Distance(m_upperVect3, m_lowerVect3) - zOffset;
+
+        Debug.Log("Camera Z dynamically set to: " + cameraZ);
 
         // Instantiate the new position and anchor the y axis to the center for the transform (camera)
         Vector3 newPos = new Vector3(prevPos.x, cameraY, cameraZ);
