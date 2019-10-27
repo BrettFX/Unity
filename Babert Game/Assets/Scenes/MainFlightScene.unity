@@ -6572,22 +6572,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketParticleSystem: {fileID: 1145572013}
---- !u!114 &464272020
-MonoBehaviour:
+--- !u!143 &464272020
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464272014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a15ffee4d3af6f44b9643fa2120c66a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 464272018}
-  xOffset: 10
-  m_upperBounds: {fileID: 272925003}
-  m_lowerBounds: {fileID: 2037411374}
+  serializedVersion: 2
+  m_Height: 1.0000001
+  m_Radius: 0.5000001
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &480228580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12683,7 +12685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a15ffee4d3af6f44b9643fa2120c66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 464272018}
   xOffset: 10
   m_upperBounds: {fileID: 272925003}
   m_lowerBounds: {fileID: 2037411374}
