@@ -7,10 +7,16 @@ public class DeathScript : MonoBehaviour
 
     public GameObject gameOverScreen;
     public GameObject gameOverText;
-    public GameObject rocket;
 
     public AudioSource crash;
     public GameObject mainAudio;
+
+    private GameObject rocket;
+
+    private void Start()
+    {
+        rocket = GameObject.FindWithTag("Rocket");
+    }
 
     void OnTriggerEnter(Collider col)
     {
