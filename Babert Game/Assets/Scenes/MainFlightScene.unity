@@ -12641,6 +12641,7 @@ MonoBehaviour:
   zOffset: -5
   m_upperBounds: {fileID: 272925003}
   m_lowerBounds: {fileID: 2037411374}
+  m_background: {fileID: 1251382885}
 --- !u!1 &964391918
 GameObject:
   m_ObjectHideFlags: 0
