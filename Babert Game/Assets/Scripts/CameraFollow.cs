@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
     Vector3 m_upperVect3;
     Vector3 m_lowerVect3;
 
-    public RectTransform m_background;
+    public Transform m_background;
 
     private void Start()
     {
@@ -34,7 +34,8 @@ public class CameraFollow : MonoBehaviour
         cameraZ = -Distance(m_upperVect3, m_lowerVect3) - zOffset;
 
         Debug.Log("Camera Z dynamically set to: " + cameraZ);
-        Debug.Log("Background height: " + m_background.rect.height);
+        //Debug.Log("Background height: " + m_background.rect.height);
+        Debug.Log("Background height: " + m_background.transform.localScale.y);
 
         // Instantiate the new position and anchor the y axis to the center for the transform (camera)
         Vector3 newPos = new Vector3(prevPos.x, cameraY, cameraZ);
