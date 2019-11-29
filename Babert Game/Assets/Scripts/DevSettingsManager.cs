@@ -9,7 +9,9 @@ public class DevSettingsManager : MonoBehaviour
     {
         GRAVITY,
         MOVEMENT_SPEED,
-        JUMP_SPEED
+        JUMP_SPEED,
+        GOD_MODE,
+        NO_CLIP
     }
 
     private Dictionary<DevSetting, float> devSettingDefaults;
@@ -19,6 +21,7 @@ public class DevSettingsManager : MonoBehaviour
     {
         public DevSetting setting;
         public Slider slider;
+        public Toggle checkbox;
     }
     public Settings[] settings;
 
@@ -43,8 +46,18 @@ public class DevSettingsManager : MonoBehaviour
         // Initialize settings states; attempt to load from player prefs
         foreach (Settings s in settings)
         {
-            s.slider.value = PlayerPrefs.GetFloat(s.setting.ToString(), devSettingDefaults[s.setting]) / 100;
-            //Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
+            if (s.slider != null)
+            {
+                s.slider.value = PlayerPrefs.GetFloat(s.setting.ToString(), devSettingDefaults[s.setting]) / 100;
+                //Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
+            }
+
+            if (s.checkbox != null)
+            {
+                // Grab saved checkbox value from player prefs
+                s.checkbox.isOn = PlayerPrefs.GetInt(s.setting.ToString(), 0) != 0;
+            }
+
         }
 
         Debug.Log("Developer settings loaded.");
@@ -55,8 +68,18 @@ public class DevSettingsManager : MonoBehaviour
     {
         foreach (Settings s in settings)
         {
-            //Debug.Log("Setting: " + s.setting + ", Slider Value: " + s.slider.value);
-            PlayerPrefs.SetFloat(s.setting.ToString(), s.slider.value * 100);
+            // Determine the type of setting (e.g., slider, checkbox, etc.) and save the respective value accordingly
+            if (s.slider != null)
+            {
+                //Debug.Log("Setting: " + s.setting.ToString() + ", Slider Value: " + s.slider.value);
+                PlayerPrefs.SetFloat(s.setting.ToString(), s.slider.value * 100);
+            }
+            
+            if (s.checkbox != null)
+            {
+                Debug.Log("Saving checkbox state for: " + s.setting.ToString() + "; state = " + s.checkbox.isOn);
+                PlayerPrefs.SetInt(s.setting.ToString(), s.checkbox.isOn ? 1 : 0);
+            }
         }
 
         Debug.Log("Developer settings saved.");
