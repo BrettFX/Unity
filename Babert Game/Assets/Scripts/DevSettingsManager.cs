@@ -46,6 +46,7 @@ public class DevSettingsManager : MonoBehaviour
         // Initialize settings states; attempt to load from player prefs
         foreach (Settings s in settings)
         {
+            // Determine the type of setting to load (e.g., slider, checkbox, ect.)
             if (s.slider != null)
             {
                 s.slider.value = PlayerPrefs.GetFloat(s.setting.ToString(), devSettingDefaults[s.setting]) / 100;

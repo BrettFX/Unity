@@ -13,13 +13,44 @@ public class DeathScript : MonoBehaviour
 
     private GameObject rocket;
 
+    private bool m_godmode = false;
+    private bool m_noclip = false;
+
     private void Start()
     {
         rocket = GameObject.FindWithTag("Rocket");
+
+        // Determine if to use cheats (e.g., developer mode enabled)
+        if (DeveloperMode.IsDevMode())
+        {
+            string pref_key = System.Enum.GetName(typeof(DevSettingsManager.DevSetting),
+                                               DevSettingsManager.DevSetting.GOD_MODE);
+            m_godmode = PlayerPrefs.GetInt(pref_key, 0) != 0;
+
+            pref_key = System.Enum.GetName(typeof(DevSettingsManager.DevSetting),
+                                               DevSettingsManager.DevSetting.NO_CLIP);
+            m_noclip = PlayerPrefs.GetInt(pref_key, 0) != 0;
+        }
     }
 
     void OnTriggerEnter(Collider col)
     {
+        // Handle God mode if enabled and developer mode is enabled
+        if (DeveloperMode.IsDevMode())
+        {
+            // TODO handle godmode
+            if (m_godmode)
+            {
+                return;
+            }
+
+            // TODO handle noclip
+            if (m_noclip)
+            {
+                return;
+            }
+        }
+
         // Set the next axis to the start x so that the initially spawned axis isn't off screen
         NextAxis.xAxis = NextAxis.START_X;
         ScoringSystem.SaveScore();
