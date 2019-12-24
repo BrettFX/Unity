@@ -94,9 +94,17 @@ public class DevSettingsManager : MonoBehaviour
         // Load default values if on; load currently saved values if off
         foreach (Settings s in settings)
         {
-            s.slider.value = defaultsToggle.isOn ? 
-                devSettingDefaults[s.setting] / 100 :
-                PlayerPrefs.GetFloat(s.setting.ToString(), devSettingDefaults[s.setting]) / 100;
+            if (devSettingDefaults.ContainsKey(s.setting))
+            {
+                s.slider.value = defaultsToggle.isOn ?
+                   devSettingDefaults[s.setting] / 100 :
+                   PlayerPrefs.GetFloat(s.setting.ToString(), devSettingDefaults[s.setting]) / 100;
+            }
+            else
+            {
+                Debug.Log(s.setting + " not in the defaults dictionary");
+            }
+           
         }
     }
 }
