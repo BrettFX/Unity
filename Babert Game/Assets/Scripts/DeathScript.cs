@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SimpleHealthBar_SpaceshipExample;
+using UnityEngine;
 
 public class DeathScript : MonoBehaviour
 {
@@ -51,16 +52,19 @@ public class DeathScript : MonoBehaviour
             }
         }
 
+        // Take some damange
+        col.gameObject.GetComponent<PlayerHealth>().TakeDamage(20);
+
         // Set the next axis to the start x so that the initially spawned axis isn't off screen
-        NextAxis.xAxis = NextAxis.START_X;
-        ScoringSystem.SaveScore();
+        //NextAxis.xAxis = NextAxis.START_X;
+        //ScoringSystem.SaveScore();
 
-        // Play crash sound and stop main audio
-        crash.Play();
-        mainAudio.SetActive(false);
+        //// Play crash sound and stop main audio
+        //crash.Play();
+        //mainAudio.SetActive(false);
 
-        // Display death screen and give the user the option to restart or go back to main menu
-        gameOverScreen.SetActive(true);
-        rocket.SetActive(false);
+        //// Display death screen and give the user the option to restart or go back to main menu
+        //gameOverScreen.SetActive(true);
+        //rocket.SetActive(false);
     }
 }
