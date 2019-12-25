@@ -6,11 +6,19 @@ public class DeathScript : MonoBehaviour
     // Jimmy Vegas Unity Tutorial
     // This script will activate your death screen and deactivate the rocket
 
+    // Game over screen assets //
+    [Header("Game Over Screen Assets")]
     public GameObject gameOverScreen;
     public GameObject gameOverText;
 
+
+    // Audio assets //
+    [Header("Audio Assets")]
     public AudioSource crash;
     public GameObject mainAudio;
+
+    // Amount of damange to inflict player when a collision occurs //
+    private const int DAMAGE = 20;
 
     private GameObject rocket;
 
@@ -53,7 +61,7 @@ public class DeathScript : MonoBehaviour
         }
 
         // Take some damange
-        col.gameObject.GetComponent<PlayerHealth>().TakeDamage(20);
+        col.gameObject.GetComponent<PlayerHealth>().TakeDamage(DAMAGE);
 
         // Set the next axis to the start x so that the initially spawned axis isn't off screen
         //NextAxis.xAxis = NextAxis.START_X;

@@ -42,7 +42,7 @@ public class ScoringSystem : MonoBehaviour
         // Only add score if the score has not already been saved (indicating gameover)
         if (!saved && !PauseMenu.paused)
         {
-            scoreDisplay.GetComponent<Text>().text = "Score: " + score;
+            scoreDisplay.GetComponent<Text>().text = "" + score;
             highScoreDisplay.GetComponent<Text>().text = "High Score: " + highScore;
 
             score += SCORE_DELTA;

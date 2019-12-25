@@ -170,6 +170,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &4989225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -359,6 +360,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &25014155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -448,11 +450,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 263940834}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 346.4, y: -76.9}
+  m_AnchoredPosition: {x: 346.4, y: -46.6}
   m_SizeDelta: {x: 570.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &33025199
@@ -546,6 +548,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &33767575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +670,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &57363006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -985,6 +989,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &66123350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1266,6 +1271,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &84876682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1664,6 +1670,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &128001217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1773,6 +1780,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &130671607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1883,6 +1891,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &131370711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,6 +2013,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &137657013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2113,6 +2123,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &153191095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2337,6 +2348,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &163085444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2447,6 +2459,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &177999820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2900,6 +2913,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &200264474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3021,6 +3035,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &205741106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3130,6 +3145,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &209575263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3597,6 +3613,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &243929036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3921,7 +3938,6 @@ RectTransform:
   - {fileID: 906223571}
   - {fileID: 1358273966}
   - {fileID: 284944981}
-  - {fileID: 1913076376}
   - {fileID: 1908641388}
   - {fileID: 33025198}
   - {fileID: 679693963}
@@ -4320,6 +4336,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &303759747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4749,6 +4766,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &339307244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4858,6 +4876,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &341056243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5139,6 +5158,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &367671673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5329,6 +5349,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &377519991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5450,6 +5471,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &388874595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5560,6 +5582,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &405681954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5682,6 +5705,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &417500673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5803,6 +5827,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &419188594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5912,6 +5937,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &425200771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6136,6 +6162,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &447735471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6245,6 +6272,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &457729461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6919,6 +6947,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &485824925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7107,6 +7136,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &510511372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7571,6 +7601,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &544354268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7885,6 +7916,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &573327224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7995,6 +8027,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &584704149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8193,6 +8226,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &588016591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8303,6 +8337,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &592891959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8504,6 +8539,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &604167511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9072,7 +9108,7 @@ RectTransform:
   - {fileID: 1580566356}
   - {fileID: 103321080}
   m_Father: {fileID: 263940834}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9329,6 +9365,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &699911455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9828,6 +9865,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &738613894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9949,6 +9987,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &748110535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10219,6 +10258,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &766364723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10858,6 +10898,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &832303159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11383,6 +11424,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &868704758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11535,6 +11577,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &878151397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11644,6 +11687,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &882052424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11874,6 +11918,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &891075184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12060,6 +12105,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!1 &924759829
 GameObject:
   m_ObjectHideFlags: 0
@@ -12110,6 +12156,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &924759832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12219,6 +12266,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &926038341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13070,6 +13118,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &986054147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13430,6 +13479,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1036683378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13552,6 +13602,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1037448958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13980,6 +14031,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1080613357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14101,6 +14153,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1088515835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14596,6 +14649,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1122904624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14718,6 +14772,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1124524693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20073,6 +20128,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1157044584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20182,6 +20238,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1160973621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20291,6 +20348,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1172175019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20515,6 +20573,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1200521123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20819,6 +20878,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1218287992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20928,6 +20988,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1223114922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21117,6 +21178,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1235455577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21226,6 +21288,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1242036261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21335,6 +21398,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1246206988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22237,6 +22301,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1332242700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22438,6 +22503,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1339285755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22792,6 +22858,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1363776506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22914,6 +22981,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1366509431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23036,6 +23104,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1370249421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23157,6 +23226,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1390436587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23347,6 +23417,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1391007700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23548,6 +23619,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1405067126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23737,6 +23809,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1412663521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24157,7 +24230,7 @@ RectTransform:
   - {fileID: 703600436}
   - {fileID: 1472931495}
   m_Father: {fileID: 263940834}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -24330,6 +24403,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1434580662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24439,6 +24513,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1444729830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24629,6 +24704,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1455295526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24911,6 +24987,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1472133418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25126,6 +25203,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1473640241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25327,6 +25405,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1526143525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25437,6 +25516,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1531225622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25674,6 +25754,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1536481113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25875,6 +25956,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1541825914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26065,6 +26147,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1555822050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26309,6 +26392,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1557025408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26522,6 +26606,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1560439548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26631,6 +26716,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1568016339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26941,6 +27027,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!1001 &1599582624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27231,6 +27318,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1615656078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27663,6 +27751,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1646147173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28123,6 +28212,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1684584621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28405,6 +28495,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1701429724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28606,6 +28697,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1707342641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28955,6 +29047,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1753482856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29064,6 +29157,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1760204212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29253,6 +29347,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1767230014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29682,6 +29777,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1806662183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30079,6 +30175,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1841197187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30280,6 +30377,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1852429800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30488,6 +30586,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1854425568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30609,6 +30708,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1864460554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30879,6 +30979,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1887953803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31272,7 +31373,7 @@ RectTransform:
   - {fileID: 62508976}
   - {fileID: 1898711186}
   m_Father: {fileID: 263940834}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -31363,6 +31464,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &1909017173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31514,83 +31616,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1910286170}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1913076375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1913076376}
-  - component: {fileID: 1913076378}
-  - component: {fileID: 1913076377}
-  m_Layer: 5
-  m_Name: Score
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1913076376
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913076375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 263940834}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 346.4, y: -47.300003}
-  m_SizeDelta: {x: 570.7, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1913076377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913076375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Score: 0'
---- !u!222 &1913076378
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913076375}
-  m_CullTransparentMesh: 0
 --- !u!1 &1913970787
 GameObject:
   m_ObjectHideFlags: 0
@@ -31620,7 +31645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322d3fae56af7864c968b3723650bac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreDisplay: {fileID: 1913076375}
+  scoreDisplay: {fileID: 1472931494}
   highScoreDisplay: {fileID: 33025197}
 --- !u!4 &1913970789
 Transform:
@@ -32382,6 +32407,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1990211523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32568,6 +32594,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &1995277959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32677,6 +32704,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &2028184156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32786,6 +32814,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &2035055352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32895,6 +32924,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &2035297087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33096,6 +33126,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &2042329499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33206,6 +33237,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &2047410976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33487,6 +33519,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!65 &2075633083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33597,6 +33630,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &2096065374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33798,6 +33832,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1992543105}
   crash: {fileID: 1824382903}
   mainAudio: {fileID: 1622754321}
+  damage: 0
 --- !u!114 &2113564902
 MonoBehaviour:
   m_ObjectHideFlags: 0
