@@ -61,7 +61,7 @@ public class DeathScript : MonoBehaviour
         }
 
         // Take some damange
-        col.gameObject.GetComponent<PlayerHealth>().TakeDamage(DAMAGE);
+        col.gameObject.GetComponent<BabertPlayerHealth>().TakeDamage(DAMAGE);
 
         // Set the next axis to the start x so that the initially spawned axis isn't off screen
         //NextAxis.xAxis = NextAxis.START_X;
